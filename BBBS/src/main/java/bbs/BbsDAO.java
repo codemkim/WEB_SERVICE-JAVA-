@@ -6,6 +6,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
 public class BbsDAO {
 	private Connection conn;
 	private ResultSet rs;
@@ -13,12 +17,12 @@ public class BbsDAO {
 	
 	public BbsDAO() {
 		try {
-			String dbURL = "jdbc:mysql://localhost:3306/BBBS";
-			String dbID ="root";
-			String dbPassword ="1234";
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
-		} catch (Exception e) {
+			Context initContext = new InitialContext();
+			Context envContext  = (Context)initContext.lookup("java:/comp/env");
+			DataSource ds = (DataSource)envContext.lookup("jdbc/TestDB");
+			conn = ds.getConnection();
+			System.out.println("db연결성공");
+		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}

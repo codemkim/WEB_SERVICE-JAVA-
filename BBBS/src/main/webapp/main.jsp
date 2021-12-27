@@ -78,7 +78,18 @@
 				<h1>에이치엘비 소액주주방</h1>
 				<p>도대체 바닥이 어디까지인지도 모르게 떨어지고 있는 에이치엘비 </p>
 				<p>우리 다같이 정보 공유하며 탈출합시다! </p>
+				<%
+					if (userID == null) {
+						
+				%>
 				<p><a style="margin-top:2rem;" class="btn btn-primary btn-pull" href="login.jsp" role="button">내 평균단가 공개하기</a></p>
+				<%
+					} else {
+				%>
+				<p><a style="margin-top:2rem;" class="btn btn-primary btn-pull" href="bbs.jsp" role="button">내 평균단가 공개하기</a></p>
+				<%
+					}
+				%>
 			
 			</div>
 		

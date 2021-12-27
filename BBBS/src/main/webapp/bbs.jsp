@@ -81,18 +81,20 @@
 			%>
 		</div>
 	</nav>
-	<%
-		
-		UserDAO userDAO = new UserDAO();
-		ArrayList list = userDAO.getCount();
-		
-	%>
+	
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 	<script type="text/javascript"
 		src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
 	<script type="text/javascript">
-	
+		<%
+		
+		UserDAO userDAO = new UserDAO();
+		ArrayList list = userDAO.getCount();
+		
+		System.out.println(list);
+		
+		%>
 		google.load("visualization", "1", {
 			packages : [ "corechart" ]
 		});
@@ -100,7 +102,7 @@
 		function drawChart() {
 			var data = google.visualization.arrayToDataTable([
 					[ "Employee", "Rating" ],
-					["7만원 이상",	<%=list.get(7)%>],
+					["7만원 이상",	 <%=list.get(7)%>],
 					[ "6만 ~ 7만원",<%=list.get(6)%>],
 					[ "5만 ~ 6만원",<%=list.get(5)%>],
 					[ "4만 ~ 5만원",<%=list.get(4)%>],
