@@ -34,6 +34,7 @@
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="main.jsp">메인</a></li>
 				<li><a href="CountAction.jsp">평균단가</a></li>
+				<li><a href="bbsfree.jsp">자유게시판</a></li>
 				<li><a href="#">물타자</a></li>	
 			</ul>
 			
@@ -86,7 +87,7 @@
 	</div>
 	<div class="container">
 		<div class="item" style="width:1000px;">
-			<img src="images/에이치.PNG" style="height:500px; width:1180px;">
+			<img src="images/에이치.PNG" style="height:480px; width:1180px;">
 		</div>
 	
 	</div>

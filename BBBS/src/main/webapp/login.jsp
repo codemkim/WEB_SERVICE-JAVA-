@@ -26,6 +26,7 @@
 			<ul class="nav navbar-nav">
 				<li><a href="main.jsp">메인</a></li>
 				<li><a href="CountAction.jsp">평균단가</a></li>
+				<li><a href="bbsfree.jsp">자유게시판</a></li>
 				<li><a href="#">물타자</a></li>	
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
